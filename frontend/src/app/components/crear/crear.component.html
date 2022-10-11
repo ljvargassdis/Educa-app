@@ -1,0 +1,44 @@
+<form id="form" #miFormulario="ngForm" (ngSubmit)="agregarcomentario(miFormulario)">
+    <input type="hidden" name="_id" [(ngModel)]="ComunidadServ.datosInput._id" required>
+    <a routerLink="/comunidad" class="text-decoration-none text-reset"><span class="badge badge-pill badge-primary">←</span></a>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="form-group">
+          <select class="form-control" id="type" name="type"  [(ngModel)]="ComunidadServ.datosInput.type" required autofocus>
+            <option>General</option>
+            <option>Ayuda</option>
+            <option>Experiencias</option>
+            <option>Proyectos</option>
+            <option>Reseñas</option>
+            <option>Bugs</option>
+            <option>Anuncios</option>
+          </select>
+      </div>
+    </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="form-group">
+                      <input class="form-control" type="text" id="title" name="title" [(ngModel)]="ComunidadServ.datosInput.title" placeholder="Nombre" required autofocus>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="form-group">
+                      <textarea class="form-control" id="text" rows="6" name="text" placeholder="Cuentanos sobre tu experiencia ¯\_(ツ)_/¯"  [(ngModel)]="ComunidadServ.datosInput.text" required autofocus></textarea>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="form-group">
+                  </div>
+              </div>
+              <div class="col-lg-2">
+                  <button class="w-100 btn btn-primary btn-lg" id="btn_comment" type="submit">Comentar</button>
+              </div>
+              </div>
+      </form>

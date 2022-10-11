@@ -1,0 +1,35 @@
+<div class="row" >
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Inicio
+            </div>
+            <div class="card-body">
+                <form #miFormulario="ngForm" (ngSubmit)="inicioUsuario(miFormulario)">  
+                    <div class="form-grup">
+                        <input 
+                        type="text" 
+                        name="email"
+                        class="form-control"
+                        placeholder="Email"
+                        [(ngModel)]="inicioServ.datosForm.email"
+                        required autofocus>
+                    </div>
+                    <div class="form-grup">
+                        <input
+                        type="password" 
+                        name="password"
+                        class="form-control"
+                        placeholder="Password"
+                        [(ngModel)]="inicioServ.datosForm.password"
+                        required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block"> 
+                        Ingresar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
