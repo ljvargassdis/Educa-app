@@ -18,9 +18,12 @@ mongoose.connect("mongodb+srv://ljvargassdis:Colombia2021*@cluster0.wygufib.mong
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 var usuario = require("./models/users");
+var comentarios= require ("./models/comentarios")
+var respuesta= require ("./models/respuesta")
 
 const jwt = require('jsonwebtoken');
 const { updateOne } = require("./models/users");
@@ -118,6 +121,41 @@ app.post("/registrar", async function (req, res) {
     await usuario.findByIdAndUpdate({ _id: id_usuario }, req.body);
     res.send({ mensaje: "Modificado correctamente" });
   });
+
+  app.get('/comunidad', async function (req, res) {
+    var v = await comentarios.find();
+    res.send(v);
+  });
+
+  app.get('/respuesta/:id', async function (req, res) {
+    var parametro=req.params.id;
+    var v = await respuesta.find({comentario:parametro});
+    res.send(v);
+  });
+
+  app.get('/comentario/:id', async function (req, res) {
+    var parametro=req.params.id;
+    var v = await comentarios.find({_id:parametro});
+    res.send(v);
+  });
+
+  app.post( '/insertar_comentario', async function (req, res) {
+    var datos = req.body;
+    var v = new comentarios(datos);
+    await v.save();
+    res.send({ mensaje: "Guardado correctamente" });
+  });  
+
+  app.post( '/insertar_respuesta/:id', async function (req, res) {
+    var parametro=req.params.id;
+    var datos = req.body;
+    datos.comentario=parametro
+    var v = new respuesta(datos);
+    await v.save();
+    res.send({ mensaje: "Guardado correctamente" });
+  });
+
+
 
 
   function verifyToken(req, res, next){
