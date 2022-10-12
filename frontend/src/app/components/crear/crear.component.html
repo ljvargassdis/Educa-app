@@ -1,6 +1,7 @@
+<div class="container">
 <form id="form" #miFormulario="ngForm" (ngSubmit)="agregarcomentario(miFormulario)">
     <input type="hidden" name="_id" [(ngModel)]="ComunidadServ.datosInput._id" required>
-    <a routerLink="/comunidad" class="text-decoration-none text-reset"><span class="badge badge-pill badge-primary">←</span></a>
+    <a routerLink="/comunidad" class="text-decoration-none text-reset"><span class="badge badge-pill badge-success">←</span></a>
     <br>
     <br>
     <div class="row">
@@ -38,7 +39,8 @@
                   </div>
               </div>
               <div class="col-lg-2">
-                  <button class="w-100 btn btn-primary btn-lg" id="btn_comment" type="submit">Comentar</button>
+                  <button class="w-100 btn btn-success btn-lg" id="btn_comment" type="submit">Comentar</button>
               </div>
               </div>
       </form>
+    </div>

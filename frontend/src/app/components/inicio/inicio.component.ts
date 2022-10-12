@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
+import swal from'sweetalert2';
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -13,6 +15,8 @@ import { Router } from '@angular/router';
 })
 
 export class InicioComponent implements OnInit {
+
+  titularAlerta:string='';
 
   constructor(
     public inicioServ:InicioService,
@@ -47,7 +51,11 @@ export class InicioComponent implements OnInit {
         this.router.navigate(['/privado']);
         
       },
-      error: (err) => console.log(err),
+      error: (err) => swal.fire({
+        icon: 'error',
+        title: 'Lo sentimos!',
+        text: 'Estudiante no registrado',
+      })
     });
   }
 

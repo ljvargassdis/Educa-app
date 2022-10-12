@@ -5,12 +5,16 @@ import {Usuario_modelo} from '../../models/usuarios'
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import swal from'sweetalert2';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+  
+  titularAlerta:string='';
 
   constructor(
     public registroServ:RegistroService,
@@ -38,6 +42,12 @@ export class RegistroComponent implements OnInit {
           this.listadoUsuario();
           formulario.reset();
           console.log(res);
+          swal.fire('Muy bien!', 'Estudiante registrado con exito!', 'info');
+
+          swal.update({
+            icon: 'success'
+          })
+
           localStorage.setItem('token', res.token);
           this.router.navigate(['/privado']);
           
