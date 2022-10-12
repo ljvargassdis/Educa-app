@@ -1,1 +1,17 @@
-<p>privado works!</p>
+<div class="container bg-light py-5">
+    <h1 class="display-5 fw-bold">Bienvenid@ al Quiz </h1>
+    <p class="col-md-8 fs-4">Este cuestionario contendrá un total de 9 preguntas. Cada pregunta tiene 10 puntos</p>
+    <h4>Reglas:</h4>
+    <ol>
+        <li>Pregunta correcta le da 10 puntos</li>
+        <li>Pregunta incorrecta da -10 puntos</li>
+        <li>Si reinicia la página saldrá del Quiz</li>
+        <li>Tendrás 60 segundos para responder cada pregunta.</li>
+    </ol>
+    <h1 style="font-family: cursive;text-align:center">Buena suerte!!</h1>
+    <div class="name col-md-4 my-3">
+        <label for="">Escriba su nombre:</label>
+        <input #name type="text" class="form-control">
+    </div>
+    <button class="btn btn-success btn-lg" routerLink="/question" (click)="startQuiz()" >Iniciar Quiz!!</button>
+</div>

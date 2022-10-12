@@ -13,7 +13,8 @@ import { TareasComponent } from './components/tareas/tareas.component';
 import { AuthGuard } from './auth.guard';
 import { ComentarioComponent } from './components/comentario/comentario.component';
 import { ComunidadComponent } from './components/comunidad/comunidad.component';
-import { CrearComponent } from './components/crear/crear.component'
+import { CrearComponent } from './components/crear/crear.component';
+import { QuestionComponent } from './components/question/question.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CrearComponent } from './components/crear/crear.component'
     TareasComponent,
     ComentarioComponent,
     ComunidadComponent,
-    CrearComponent
+    CrearComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

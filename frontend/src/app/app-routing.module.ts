@@ -9,6 +9,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import {ComunidadComponent} from './components/comunidad/comunidad.component';
 import {ComentarioComponent} from './components/comentario/comentario.component';
 import {CrearComponent} from './components/crear/crear.component'
+import { QuestionComponent} from './components/question/question.component'
 
 
 import { AuthGuard } from './auth.guard'
@@ -28,6 +29,10 @@ const routes: Routes = [
     component: PrivadoComponent,
     canActivate:[AuthGuard]
   }, 
+  {
+    path: 'question',
+    component: QuestionComponent
+  },
   {
     path: 'inicio',
     component: InicioComponent

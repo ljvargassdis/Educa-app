@@ -4,11 +4,11 @@
   <div class="col-lg-8">
     <a routerLink="/comentario/{{ v._id }}"
       class="text-decoration-none text-reset"
-      ><h4>{{ v.title }}</h4></a>
+      ><h4 style="font-family: cursive;">{{ v.title }}</h4></a>
     <p class="long-text">
       {{ v.text.length >= 350 ? (v.text | slice: 0:350) + "..." : v.text }}
     </p>
-    <span class="badge badge-pill badge-danger">{{ v.type }}</span>
+    <span class="badge badge-pill badge-danger" style="font-family: cursive;text-align:center">{{ v.type }}</span>
   </div>
 </div>
 
