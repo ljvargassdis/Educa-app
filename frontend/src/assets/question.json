@@ -19,7 +19,7 @@
             "explanation": "TS utiliza los (:) para separar la propiedad nombre de la propiedad tipo"
         },
         {
-            "questionText": " Cuál de los siguientes enunciados NO ES un tipo usado en TypeScript?",
+            "questionText": " Cuál de los siguientes opciones NO ES un tipo usado en TypeScript?",
             "options": [{
                     "text": "number"
                 },
@@ -55,7 +55,7 @@
             "explanation": "las interfaces usualmente son usadas para enlistar las propiedades y métodos para un objeto"
         },
         {
-            "questionText": "¿Cómo más puede Array<number> ser escrito en TypeScript?",
+            "questionText": "¿Cómo más puede crear Array<number> ser escrito en TypeScript?",
             "options": [{
                     "text": "@number"
                 },
@@ -73,7 +73,7 @@
             "explanation": "number[] es otra forma de escribir Array<number> en TypeScript"
         },
         {
-            "questionText": "¿En cuál de éstas estas opciones es correcta para traer parámetros?",
+            "questionText": "¿En cuál de éstas opciones es correcta para traer parámetros?",
             "options": [{
                     "text": "constructor",
                     "correct": true
