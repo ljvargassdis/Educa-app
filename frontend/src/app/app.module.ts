@@ -14,7 +14,8 @@ import { AuthGuard } from './auth.guard';
 import { ComentarioComponent } from './components/comentario/comentario.component';
 import { ComunidadComponent } from './components/comunidad/comunidad.component';
 import { CrearComponent } from './components/crear/crear.component';
-import { QuestionComponent } from './components/question/question.component'
+import { QuestionComponent } from './components/question/question.component';
+import { ChangeBgDirective } from './change-bg.directive'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { QuestionComponent } from './components/question/question.component'
     ComentarioComponent,
     ComunidadComponent,
     CrearComponent,
-    QuestionComponent
+    QuestionComponent,
+    ChangeBgDirective
   ],
   imports: [
     BrowserModule,
